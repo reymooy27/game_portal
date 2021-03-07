@@ -1,38 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #1e1e20;
+  color: #516363;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main--menu {
+  width: 100%;
+  margin-left: 280px;
+  position: relative;
+  overflow-x: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+::-webkit-scrollbar-track {
+  border-radius: 0.8rem;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.8rem;
+  background-color: #814ac9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .main--menu {
+    margin-left: 0;
   }
 }

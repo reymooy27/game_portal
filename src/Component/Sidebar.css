@@ -1,0 +1,101 @@
+.sidebar {
+  width: 280px;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #171717;
+  padding: 0 40px;
+  z-index: 100;
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  transition: all ease-in-out 0.3s;
+  color: #849ea4;
+  font-size: 14px;
+}
+
+.sidebar--logo {
+  margin-bottom: 30px;
+  padding: 20px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+.sidebar--play--button {
+  margin-bottom: 20px;
+}
+
+.sidebar--play--button button {
+  border-radius: 30px;
+  width: 120px;
+  height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #814ac9;
+  color: white;
+  font-size: 12px;
+  transition: all ease-in-out 0.3s;
+}
+
+.sidebar--play--button button:hover {
+  transform: scale(1.06);
+  background-color: #8f5ece;
+}
+
+.sidebar--menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.sidebar--social {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sidebar--social svg {
+  color: #849ea4;
+
+  margin-right: 10px;
+  width: 13px;
+}
+
+.sidebar--help {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.sidebar--menu a,
+.sidebar--help a {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar--menu svg,
+.sidebar--help svg {
+  margin-right: 20px;
+  width: 18px;
+}
+
+.sidebar--menu a:hover,
+.sidebar--help a:hover,
+.sidebar--social svg:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    left: -100%;
+  }
+}

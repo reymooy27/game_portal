@@ -1,0 +1,38 @@
+.single--tournament {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 6em;
+}
+
+.league {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.league h1 {
+  color: white;
+}
+.league--image {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.league--image img {
+  width: 100%;
+  object-fit: cover;
+}
+.league--series--list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.league--series--list a {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .league--image {
+    width: 150px;
+  }
+}

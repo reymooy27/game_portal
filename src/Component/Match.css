@@ -1,0 +1,53 @@
+.match--result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.match--result--team {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.match--result--team--logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.match--result--team--logo img {
+  width: 100%;
+  object-fit: cover;
+}
+.match--result--team--score {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.match--result--team h1 {
+  color: white;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .match--result {
+    flex-direction: column;
+  }
+
+  .match--result--team {
+    margin: 30px auto;
+  }
+
+  .match--result--team--score {
+    margin: 20px 0;
+  }
+
+  .last {
+    order: -1;
+  }
+}
