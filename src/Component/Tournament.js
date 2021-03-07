@@ -10,7 +10,7 @@ const {id, game} = useParams()
   const [tournament, setTournament] = useState([])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/${game}/tournaments?token=${API_KEY}&filter[id]=${id}`)
+    axios.get(`/${game}/tournaments?token=${API_KEY}&filter[id]=${id}`)
     .then(res=> setTournament(res.data))
     .catch(err=> console.log(err))
   }, [game,id])

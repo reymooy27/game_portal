@@ -11,7 +11,7 @@ function Series() {
   const [series, setSeries] = useState([])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/${game}/series?token=${API_KEY}&filter[id]=${id}`)
+    axios.get(`/${game}/series?token=${API_KEY}&filter[id]=${id}`)
     .then(res=> setSeries(res.data))
     .catch(err=> console.log(err))
   }, [id,game])

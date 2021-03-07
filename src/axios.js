@@ -1,7 +1,7 @@
 import axios from "axios";
 import { cacheAdapterEnhancer, throttleAdapterEnhancer } from 'axios-extensions';
 const instance = axios.create({
-  baseUrl: 'https://cors-anywhere.herokuapp.com/',
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://api.pandascore.co',
   adapter: throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaults.adapter))
 });
 

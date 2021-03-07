@@ -12,7 +12,7 @@ function Match() {
   const [match, setTeam] = useState([])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/${game}/matches?token=${API_KEY}&filter[id]=${id}`)
+    axios.get(`/${game}/matches?token=${API_KEY}&filter[id]=${id}`)
     .then(res=> setTeam(res.data))
     .catch(err=> console.log(err))
   }, [id,game])

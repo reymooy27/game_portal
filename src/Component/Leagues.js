@@ -11,25 +11,25 @@ function Leagues() {
   const API_KEY = 'ZwTfMpV9PIrXFK8pa2cInTeOs9d__50AlZbvpftdB4-GOp-VLJ8'
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/pubg/leagues?token=${API_KEY}&page[size]=50`)
+    axios.get(`/pubg/leagues?token=${API_KEY}&page[size]=50`)
     .then(res=> setpubgLeagues(res.data))
     .catch(err=> console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/csgo/leagues?token=${API_KEY}&page[size]=100`)
+    axios.get(`/csgo/leagues?token=${API_KEY}&page[size]=100`)
     .then(res=> setCsgoLeagues(res.data))
     .catch(err=> console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/dota2/leagues?token=${API_KEY}&page[size]=50`)
+    axios.get(`/dota2/leagues?token=${API_KEY}&page[size]=50`)
     .then(res=> setDotaLeagues(res.data))
     .catch(err=> console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get(`https://api.pandascore.co/lol/leagues?token=${API_KEY}&page[size]=50`)
+    axios.get(`/lol/leagues?token=${API_KEY}&page[size]=50`)
     .then(res=> setlolLeagues(res.data))
     .catch(err=> console.log(err))
   }, [])

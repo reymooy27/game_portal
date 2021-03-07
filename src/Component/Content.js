@@ -3,6 +3,7 @@ import img from '../image/Untitled-1.png'
 import './Content.css'
 import Avatar from '@material-ui/core/Avatar';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
+import { makeStyles } from '@material-ui/core/styles';
 import {Share, Facebook,
 Twitter,
 YouTube,AddCircleOutline} from '@material-ui/icons';
@@ -10,7 +11,16 @@ import dota from '../image/8a8b50da2bc4afa933718061fe291520.png'
 import trophy1 from '../image/iconmonstr-trophy-5-240 (1).png'
 import trophy2 from '../image/iconmonstr-trophy-5-240.png'
 import CanvasJSReact from '../assets/canvasjs.react'
+import { Link } from 'react-router-dom';
+import { IconButton } from '@material-ui/core';
 // const CanvasJS = CanvasJSReact.CanvasJS;
+  const useStyles = makeStyles(() => ({
+  root: {
+    color: '#516363'
+  },
+}));
+
+
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const options = {
 			animationEnabled: true,
@@ -60,6 +70,7 @@ const options = {
 
   
   function Content() {
+  const classes = useStyles();
 
   return (
     <div className='content'>
@@ -73,18 +84,28 @@ const options = {
 
     <div className='content--tab'>
       <div className='content--tab--link'>
-        <a className='content--tab--active' href='/'>Basic Information</a>
-        <a href='/'>Statistic</a>
-        <a href='/'>Team</a>
-        <a href='/'>Achievements</a>
-        <a href='/'>Friends</a>
+        <Link className='content--tab--active' to='/'>Basic Information</Link>
+        <Link to='/'>Statistic</Link>
+        <Link to='/'>Team</Link>
+        <Link to='/'>Achievements</Link>
+        <Link to='/'>Friends</Link>
       </div>
       <div className='content--tab--icon'>
-        <Facebook/>
-        <Twitter/>
-        <YouTube/>
-        <Share/>
-        <AddCircleOutline/>
+        <IconButton className={classes.root}>
+          <Facebook/>
+        </IconButton>
+        <IconButton className={classes.root}>
+          <Twitter/>
+        </IconButton>
+        <IconButton className={classes.root}>
+          <YouTube/>
+        </IconButton>
+        <IconButton className={classes.root}>
+          <Share/>
+        </IconButton>
+        <IconButton className={classes.root}>
+          <AddCircleOutline/>
+        </IconButton>
       </div>
     </div>
 
@@ -96,7 +117,7 @@ const options = {
         <button>PLAY NOW</button>
       </div>
       <div className='content--card card2'>
-        <h3>PLAYErUNKNOWN'S</h3>
+        <h3>PLAYERUNKNOWN'S</h3>
         <h1>Battlegro<span>unds</span></h1>
         <p>Do not miss the beginning of a new battle season </p>
         <button>PLAY NOW</button>
